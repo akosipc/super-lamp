@@ -12,6 +12,7 @@ gem "sdoc", "~> 0.4.0", group: :doc
 gem "devise"
 gem "devise_invitable"
 gem "omniauth-facebook"
+gem "omniauth-twitter"
 gem "hamlit-rails"
 gem "reformed", github: "akosipc/reformed"
 gem "bootstrap-sass"
@@ -19,7 +20,6 @@ gem "bootswatch-sass", git: "git://github.com/mkhairi/bootswatch-sass.git"
 gem "virtus"
 
 group :development do
-  gem "byebug"
   gem "quiet_assets"
   gem "awesome_print"
   gem "html2haml"
