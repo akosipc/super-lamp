@@ -1,0 +1,15 @@
+.navbar.navbar-default
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{ type: "button", data: { toggle: "collapse", target: "#collapser" } }
+        %span.sr-only
+          = t("navigation.toggle_navigation")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to root_path, class: "navbar-brand" do
+        eSports Betting Shit
+    .navbar-collapse.collapse#collapser
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to "Sign In", "#"

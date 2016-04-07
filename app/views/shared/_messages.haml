@@ -1,0 +1,4 @@
+- flash.each do |name, msg|
+  %div.alert.alert-dismissable.notifications{class: "alert-#{name.to_s == 'notice' ? 'success' : 'danger'}"}
+    %button.close{ data: { dismiss: "alert" }, aria: { hidden: true }, type: "button" } &times;
+    = msg

@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: esports_development
+
+test:
+  <<: *default
+  database: esports_test
+
+production:
+  <<: *default
+  database: esports_production
