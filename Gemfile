@@ -18,6 +18,7 @@ gem "reformed", github: "akosipc/reformed"
 gem "bootstrap-sass"
 gem "bootswatch-sass", git: "git://github.com/mkhairi/bootswatch-sass.git"
 gem "virtus"
+gem "pundit"
 
 group :development do
   gem "quiet_assets"
