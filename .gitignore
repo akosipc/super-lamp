@@ -20,4 +20,3 @@
 .ruby-version
 
 config/database.yml
-config/secrets.yml
