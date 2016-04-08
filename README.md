@@ -1,5 +1,6 @@
 ## Pasugalan sa Gorated
 
+[![Circle CI](https://circleci.com/gh/akosipc/super-lamp.svg?style=svg)](https://circleci.com/gh/akosipc/super-lamp)
 
 #### Version
 
