@@ -18,7 +18,7 @@ module Selectable
       end.reject(&:nil?)
     end
 
-    private
+  private
     def object_title(obj)
       if defined?(obj.full_name)
         obj.full_name
