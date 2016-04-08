@@ -1,0 +1,21 @@
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Team
+      %th Country
+      %th Actions
+  %tbody
+    - @teams.each do |team|
+      %tr
+        %td= team.name
+        %td
+          .f16
+            .flag{ class: "#{team.country.downcase}" }
+            = team.country
+        %td
+          = link_to "Edit Team", edit_admin_team_path(team)
+          |
+          = link_to "Delete Team", admin_team_path(team), method: :delete
+
+= link_to "New Team?", new_admin_team_path
+

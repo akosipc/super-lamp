@@ -1,4 +1,4 @@
-class TeamsController < ApplicationController
+class Admin::GamesController < ApplicationController
 
   def index
     @teams = Team.all

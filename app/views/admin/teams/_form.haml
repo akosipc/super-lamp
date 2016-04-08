@@ -1,0 +1,10 @@
+= render "shared/errors", object: @team if @team.errors.any?
+
+= reform_for [:admin, @team] do |f|
+  = f.input :logo, as: :file, class: "form-control"
+  = f.input :name, as: :string, class: "form-control"
+  = f.input :description, as: :text, class: "form-control"
+  .form-group
+    = f.label :country
+    = f.country_select :country, {}, class: "form-control"
+  = f.submit

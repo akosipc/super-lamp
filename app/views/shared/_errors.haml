@@ -1,0 +1,9 @@
+%ul.errors
+  %p
+    %strong
+      = pluralize(object.errors.full_messages.count, "error")
+      encountered
+
+  - object.errors.full_messages.each do |error|
+    %li= error
+

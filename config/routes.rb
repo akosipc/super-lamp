@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   namespace :admin, path: "sanctuary" do
     get "/dashboard", to: "dashboard#index", as: :dashboard
     resources :teams
+    resources :games
   end
 
 end
