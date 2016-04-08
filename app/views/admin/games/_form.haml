@@ -1,0 +1,6 @@
+= render "shared/errors", object: @game if @game.errors.any?
+
+= reform_for [:admin, @game] do |f|
+  = f.input :name, class: "form-control", as: :string
+  = f.input :kind, as: :select, choices: ["FPS", "MOBA", "MMO"], html: { class: "form-control" }
+  = f.submit

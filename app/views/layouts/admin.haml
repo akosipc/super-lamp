@@ -10,4 +10,8 @@
     = render "admin/shared/header"
     = render "shared/messages"
     .container
-      = yield
+      .row
+        .col-md-2
+          = render "admin/shared/sidebar"
+        .col-md-10
+          = yield

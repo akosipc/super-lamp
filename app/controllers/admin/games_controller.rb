@@ -1,18 +1,18 @@
-class Admin::GamesController < ApplicationController
+class Admin::GamesController < AdminController
 
   def index
-    @teams = Team.all
+    @games = Game.all
   end
 
   def new
-    @team = Team.new
+    @game = Game.new
   end
 
   def create
-    @team = Team.new(team_params)
+    @game = Game.new(game_params)
 
-    if @team.save
-      redirect_to teams_path, notice: "Yay! Successfully created this team"
+    if @game.save
+      redirect_to admin_games_path, notice: "Yay! Successfully created this game"
     else
       flash[:error] = "There were some errors encountered"
       render :new
@@ -20,14 +20,14 @@ class Admin::GamesController < ApplicationController
   end
 
   def edit
-    @team = Team.find(params[:id])
+    @game = Game.find(params[:id])
   end
 
   def update
-    @team = Team.find(params[:id])
+    @game = Game.find(params[:id])
 
-    if @team.update_attributes(team_params)
-      redirect_to teams_path, notice: "Yay! Successfully edited this team"
+    if @game.update_attributes(game_params)
+      redirect_to admin_games_path, notice: "Yay! Successfully edited this game"
     else
       flash[:error] = "There were some errors encountered"
       render :new
@@ -35,16 +35,15 @@ class Admin::GamesController < ApplicationController
   end
 
   def destroy 
-    @team = Team.find(params[:id])
-    @team.destroy
+    @game = Game.find(params[:id])
+    @game.destroy
 
-    redirect_to teams_path, notice: "Nooo! Successfully deleted this team"
-
+    redirect_to admin_games_path, notice: "Nooo! Successfully deleted this game"
   end
 
 private 
-  def team_params
-    params.require(:team).permit(:name, :description, :logo, :country)
+  def game_params
+    params.require(:game).permit(:name, :kind)
   end
 
 end

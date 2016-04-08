@@ -1,0 +1,18 @@
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Game
+      %th Type
+      %th Actions
+  %tbody
+    - @games.each do |game|
+      %tr
+        %td= game.name
+        %td= game.kind
+        %td
+          = link_to "Edit game", edit_admin_game_path(game)
+          |
+          = link_to "Delete game", admin_game_path(game), method: :delete
+
+= link_to "New Game?", new_admin_game_path
+
