@@ -28,12 +28,12 @@ group :development do
   gem "html2haml"
   gem "bullet"
   gem "letter_opener"
-  gem "pry"
 end
 
 group :development, :test do
   gem "byebug"
   gem "spring"
+  gem "pry"
 end
 
 group :test do

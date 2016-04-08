@@ -7,4 +7,9 @@
   .form-group
     = f.label :country
     = f.country_select :country, {}, class: "form-control"
+
+  .form-group
+    = f.label :game_ids, "Game"
+    = f.select :game_ids, options_for_select(Game.as_select_collection), {}, { class: "form-control", multiple: true }
+
   = f.submit

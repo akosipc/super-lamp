@@ -44,7 +44,7 @@ class Admin::TeamsController < AdminController
 
 private 
   def team_params
-    params.require(:team).permit(:name, :description, :logo, :country)
+    params.require(:team).permit(:name, :description, :logo, :country, :game_ids)
   end
 
 end
