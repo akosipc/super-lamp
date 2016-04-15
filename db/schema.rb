@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160408013937) do
+ActiveRecord::Schema.define(version: 20160415030432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.date     "end_date"
+    t.date     "start_date"
+    t.time     "starts_at"
+    t.time     "ends_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +40,19 @@ ActiveRecord::Schema.define(version: 20160408013937) do
   end
 
   add_index "games_teams", ["game_id", "team_id"], name: "index_games_teams_on_game_id_and_team_id", unique: true, using: :btree
+
+  create_table "matches", force: :cascade do |t|
+    t.string   "name"
+    t.date     "end_date"
+    t.date     "start_date"
+    t.time     "starts_at"
+    t.time     "ends_at"
+    t.integer  "match_id"
+    t.integer  "team_a_id"
+    t.integer  "team_b_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "providers", force: :cascade do |t|
     t.string   "name"
