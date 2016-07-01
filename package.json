@@ -1,0 +1,17 @@
+{
+  "name": "eSportsTracker",
+  "dependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "browserify-incremental": "^3.0.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "private": true,
+  "engines": {
+    "node": "^4"
+  },
+  "devDependencies": {
+    "lodash": "^4.13.1"
+  }
+}

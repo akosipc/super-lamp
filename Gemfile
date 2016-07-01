@@ -21,6 +21,7 @@ gem "virtus"
 gem "pundit"
 gem "country_select"
 gem "world-flags"
+gem "browserify-rails"
 
 group :development do
   gem "quiet_assets"

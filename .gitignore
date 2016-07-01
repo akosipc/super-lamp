@@ -20,3 +20,5 @@
 .ruby-version
 
 config/database.yml
+.tool-versions
+node_modules/*
